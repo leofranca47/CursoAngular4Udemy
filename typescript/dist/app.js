@@ -3,10 +3,7 @@ var ola = function (nome, sobrenome) {
     console.log("olá " + nome + sobrenome);
 };
 ola('Leo', 'França');
-
-
-let mensagem = 'eu'
-let num = 10
-let tudo = ["casa", "comida", "roupa"]
-
-
+var mensagem = 'eu';
+var num = 10;
+var tudo = ["casa", "comida", "roupa"];
+tudo.push('lavada');
