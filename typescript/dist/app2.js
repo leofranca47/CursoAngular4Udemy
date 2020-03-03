@@ -1,52 +1,53 @@
 "use strict";
-var Carro = /** @class */ (function () {
-    function Carro(modelo, numeroDePortas) {
+class Carro {
+    constructor(modelo, numeroDePortas) {
         this.velocidade = 0;
         this.modelo = modelo;
         this.nummeroDePortas = numeroDePortas;
     }
-    Carro.prototype.acelerar = function () {
-        this.velocidade += 10;
-    };
-    Carro.prototype.parar = function () {
+    acelerar(v = 10) {
+        this.velocidade += v;
+    }
+    parar() {
         this.velocidade = 0;
-    };
-    Carro.prototype.velocidadeAtual = function () {
+    }
+    velocidadeAtual() {
         return this.velocidade;
-    };
-    return Carro;
-}());
-var Concessionaria = /** @class */ (function () {
-    function Concessionaria(endereco) {
+    }
+}
+class Concessionaria {
+    constructor(endereco) {
         this.endereco = '';
         this.endereco = endereco;
     }
-    Concessionaria.prototype.FornecerEndereco = function () {
+    FornecerEndereco() {
         return this.endereco;
-    };
-    Concessionaria.prototype.MostrarListaDeCarros = function () {
+    }
+    MostrarListaDeCarros() {
         return this.listaDecarros;
-    };
-    return Concessionaria;
-}());
-var Pessoa = /** @class */ (function () {
-    function Pessoa(nome, carroPreferido) {
+    }
+}
+class Pessoa {
+    constructor(nome, carroPreferido) {
         this.nome = nome;
         this.carroPreferido = carroPreferido;
     }
-    Pessoa.prototype.DizerNome = function () {
+    DizerNome() {
         return this.nome;
-    };
-    Pessoa.prototype.DizerCarroPreferido = function () {
+    }
+    DizerCarroPreferido() {
         return this.carroPreferido;
-    };
-    Pessoa.prototype.ComprarCarro = function (carro) {
+    }
+    ComprarCarro(carro) {
         this.carro = carro;
-    };
-    Pessoa.prototype.DizerCarroQueTem = function () {
+    }
+    DizerCarroQueTem() {
         return this.carro;
-    };
-    return Pessoa;
-}());
-var pessoa = new Pessoa('jose', 'veloster');
+    }
+}
+let pessoa = new Pessoa('jose', 'veloster');
 console.log(pessoa.DizerCarroPreferido());
+let carroA = new Carro("celta", 4);
+carroA.acelerar(60);
+console.log(carroA);
+console.log(carroA.velocidadeAtual());

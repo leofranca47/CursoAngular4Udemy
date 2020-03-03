@@ -8,8 +8,8 @@ class Carro {
         this.nummeroDePortas = numeroDePortas
     }
 
-    public acelerar(): void {
-        this.velocidade += 10
+    public acelerar(v: number = 10): void {
+        this.velocidade += v
     }
 
     public parar(): void{
@@ -68,3 +68,8 @@ class Pessoa{
 
 let pessoa = new Pessoa('jose', 'veloster')
 console.log(pessoa.DizerCarroPreferido())
+
+let carroA = new Carro("celta", 4);
+carroA.acelerar(60);
+console.log(carroA);
+console.log(carroA.velocidadeAtual());

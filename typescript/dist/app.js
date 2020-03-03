@@ -1,9 +1,9 @@
 "use strict";
-var ola = function (nome, sobrenome) {
+var ola = (nome, sobrenome) => {
     console.log("olá " + nome + sobrenome);
 };
 ola('Leo', 'França');
-var mensagem = 'eu';
-var num = 10;
-var tudo = ["casa", "comida", "roupa"];
+let mensagem = 'eu';
+let num = 10;
+let tudo = ["casa", "comida", "roupa"];
 tudo.push('lavada');
